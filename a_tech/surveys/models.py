@@ -19,3 +19,5 @@ class QuestionOrder(models.Model):
     question_id = models.ForeignKey(Question, on_delete = models.CASCADE)
     survey_id = models.ForeignKey(Survey, on_delete = models.CASCADE)
     order = models.IntegerField()
+    def __str__(self):
+        return "Survey {}-{}".format(self.survey_id, self.order)

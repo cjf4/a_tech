@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Survey, Question, QuestionOrder
+
+survey_models = [Survey, Question, QuestionOrder]
+
+admin.site.register(survey_models)
